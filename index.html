@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <h1>Minha Lista de Compras 🛒</h1>
+
+  <div class="item-form">
+    <input type="text" id="item" placeholder="Item" required>
+    <input type="number" id="quantidade" placeholder="Qtd." required>
+    <input type="number" id="valor" placeholder="R$ Unitário" required step="0.01">
+    <input type="text" id="categoria" placeholder="Categoria (opcional)">
+    <button onclick="adicionarItem()">Adicionar</button>
+  </div>
+  
+  <table id="lista">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Qtd.</th>
+        <th>Valor</th>
+        <th>Total</th>
+        <th>Categoria</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="total" id="totalGeral">Total: R$ 0,00</div>
+  <button id="exportarCSV" class="exportar">Exportar CSV</button>
+  
+  <script src="script.js"></script>
+
+  <nav class="menu-bottom">
+    <a href="index.html" class="ativo">🏠<br>Home</a>
+    <a href="dashboard.html">📊<br>Dashboard</a>
+        <!--
+    <a href="historico.html">📅<br>Histórico</a>
+    <a href="config.html">⚙️<br>Config</a> -->
+  </nav>
+  
+</body>
+</html>
